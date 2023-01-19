@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import blogSlice from './blog/blogSlice';
+import blogSlice from './blogSlice/blogSlice';
 
 const rootReducer = combineReducers({
   blog: blogSlice,

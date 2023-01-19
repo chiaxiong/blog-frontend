@@ -7,6 +7,9 @@ const initialState = {
   error: null,
 };
 
+/**
+ * fetch all the blogs
+ */
 export const fetchBlogs = createAsyncThunk('blogs/fetchBlogs', async () => {
   return await axios
     .get('http://localhost:4000/api/blog')
@@ -33,6 +36,6 @@ const blogSlice = createSlice({
   },
 });
 
-export const { postAdded } = blogSlice.actions;
+export const allBlogs = ({ blog }) => blog.blogs;
 
 export default blogSlice.reducer;
