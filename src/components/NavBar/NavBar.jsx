@@ -10,7 +10,7 @@ const NavBar = () => {
           <h1>Home</h1>
         </Link>
         <Link to="/blog">
-          <h1>My Blog</h1>
+          <h1>Blogs</h1>
         </Link>
       </NavBarStyle>
     </header>

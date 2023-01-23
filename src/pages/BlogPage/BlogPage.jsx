@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { blogAPI, allBlogs } from '../../redux/slice/blogSlice/blogSlice';
 import Blog from '../../components/Blog/Blog';
-import BlogForm from '../../components/BlogForm/BlogForm';
 import BlogPageStyle from './Styles/BlogPageStyle';
+import { Link } from 'react-router-dom';
 
 const BlogPage = () => {
   const blogs = useSelector(allBlogs);
@@ -22,8 +22,8 @@ const BlogPage = () => {
   return (
     <div>
       <h1>My Blogs</h1>
+      <Link to="/blog/add-form">Add Blog</Link>
       <BlogPageStyle>{renderBlog}</BlogPageStyle>
-      <BlogForm />
     </div>
   );
 };
