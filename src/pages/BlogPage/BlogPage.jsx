@@ -13,8 +13,12 @@ const BlogPage = () => {
     dispatch(blogAPI());
   }, [dispatch]);
 
+  const openBlog = () => {
+    console.log('clicking');
+  };
+
   const renderBlog = blogs.map((blog) => (
-    <div className="blog-container" key={blog.id}>
+    <div className="blog-container" key={blog._id} onClick={openBlog}>
       <Blog {...blog} />
     </div>
   ));
