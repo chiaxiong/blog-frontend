@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { postBlog } from '../../redux/slice/blogSlice/blogSlice';
+import {
+  BlogWrapper,
+  BlogFormContainer,
+  ButtonContainer,
+  BackButton,
+} from './Styles/BlogFormStyle';
 
 const BlogForm = () => {
   const [title, setTitle] = useState('');
@@ -25,31 +32,59 @@ const BlogForm = () => {
     }
   };
 
+  //TODO: create modal component for custom alert message
+  const clearButton = () => {
+    // if (title || content) {
+    //   alert('Delete all progress?');
+    // }
+    setTitle('');
+    setContent('');
+  };
+
+  const showContentLength = content.length > 0 ? content.length : null;
   return (
-    <div>
-      <h2>Add Blog</h2>
-      <section>
-        <form className="blogForm">
-          <label htmlFor="blogTitle">Blog Title: </label>
-          <input
-            type="text"
-            id="blogTitle"
-            name="blogTitle"
-            value={title}
-            onChange={handleTitle}
-          />
-          <label htmlFor="blogTitle">Content: </label>
-          <input
-            type="text"
-            id="blogContent"
-            name="blogContent"
-            value={content}
-            onChange={handleContent}
-          />
-        </form>
-        <input type="submit" form="blogForm" value="submit" onClick={addBlog} />
-      </section>
-    </div>
+    <>
+      <BackButton>
+        <Link to="/blog/">{'<<< Back'}</Link>
+      </BackButton>
+      <BlogWrapper>
+        <section>
+          <BlogFormContainer>
+            <label htmlFor="blogTitle">Blog Title: </label>
+            <input
+              type="text"
+              id="blogTitle"
+              name="blogTitle"
+              value={title}
+              onChange={handleTitle}
+            />
+            <label htmlFor="blogTitle">Content: </label>
+            <section>
+              <textarea
+                type="text"
+                id="blogContent"
+                name="blogContent"
+                value={content}
+                onChange={handleContent}
+              ></textarea>
+            </section>
+          </BlogFormContainer>
+          <ButtonContainer>
+            <button
+              type="submit"
+              form="blogForm"
+              value="submit"
+              onClick={addBlog}
+            >
+              Submit
+            </button>
+            <button type="button" value="clear" onClick={clearButton}>
+              Clear
+            </button>
+          </ButtonContainer>
+        </section>
+      </BlogWrapper>
+    </>
   );
 };
 

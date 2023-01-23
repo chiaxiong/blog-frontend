@@ -5,5 +5,5 @@ export default styled.div`
   grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 2em;
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 10vh;
 `;
