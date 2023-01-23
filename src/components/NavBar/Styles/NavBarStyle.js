@@ -8,7 +8,6 @@ export default styled.div`
   background-color: black;
 
   a {
-    text-decoration: none;
     color: white;
   }
 

@@ -41,7 +41,6 @@ const BlogForm = () => {
     setContent('');
   };
 
-  const showContentLength = content.length > 0 ? content.length : null;
   return (
     <>
       <BackButton>

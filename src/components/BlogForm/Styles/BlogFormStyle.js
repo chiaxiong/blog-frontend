@@ -16,9 +16,8 @@ const BackButton = styled.div`
   display: block;
   width: 60%;
   margin: 20px auto;
-  
+
   a {
-    text-decoration: none;
     color: teal;
   }
 `;
