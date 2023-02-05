@@ -26,7 +26,7 @@ const BlogPage = () => {
   return (
     <BlogPageTitle>
       <h1>My Blogs</h1>
-      <Link hrefo="/blog/add-form">Add Blog</Link>
+      <Link href="/blog/form">Add Blog</Link>
       <BlogLayout>{renderBlog}</BlogLayout>
     </BlogPageTitle>
   );

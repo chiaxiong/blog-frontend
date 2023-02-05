@@ -2,7 +2,7 @@ import React from 'react';
 import NavBarStyle from './Styles/NavBarStyle';
 import Link from 'next/link';
 
-const NavBar = (props) => {
+const NavBar = ({ children }) => {
   return (
     <>
       <header>
@@ -15,7 +15,7 @@ const NavBar = (props) => {
           </Link>
         </NavBarStyle>
       </header>
-      {props.children}
+      {children}
     </>
   );
 };

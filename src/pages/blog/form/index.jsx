@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { postBlog } from '../../redux/slice/blogSlice/blogSlice';
+import { postBlog } from '../../../redux/slice/blogSlice/blogSlice';
 import {
   BlogWrapper,
   BlogFormContainer,
