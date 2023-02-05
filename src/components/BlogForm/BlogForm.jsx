@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { postBlog } from '../../redux/slice/blogSlice/blogSlice';
 import {
   BlogWrapper,
@@ -44,7 +44,7 @@ const BlogForm = () => {
   return (
     <>
       <BackButton>
-        <Link to="/blog/">{'<<< Back'}</Link>
+        <Link href="/blog/">{'<<< Back'}</Link>
       </BackButton>
       <BlogWrapper>
         <section>
