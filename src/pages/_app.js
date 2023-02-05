@@ -1,13 +1,13 @@
 import { Provider } from 'react-redux';
-import NavBar from '../components/NavBar/NavBar';
+import Layout from '../components/Layout';
 import store from '../redux/store';
 
 function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <NavBar>
+      <Layout>
         <Component {...pageProps} />
-      </NavBar>
+      </Layout>
     </Provider>
   );
 }
